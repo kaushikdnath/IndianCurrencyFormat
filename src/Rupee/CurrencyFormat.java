@@ -110,6 +110,8 @@ public class CurrencyFormat {
         if (value == null) {
             return "";
         } else {
+            String minusSymbol=(value.contains("-"))?"-":"";
+            value=value.replaceFirst("-", "");
             String currency = String.format("%s", value);
             Matcher m = (Pattern.compile("\\.\\d*")).matcher(currency);
             String decimal = "";
@@ -127,7 +129,7 @@ public class CurrencyFormat {
                 }
             }
 //        return ((indiancurrency.trim().charAt(0) == ',') ? indiancurrency.trim().substring(1) : indiancurrency.trim()) + decimal;
-            return indiancurrency.trim() + decimal;
+            return minusSymbol+indiancurrency.trim() + decimal;
         }
     }
 
@@ -135,6 +137,8 @@ public class CurrencyFormat {
         if (value == null) {
             return "";
         } else {
+            String minusSymbol=(value.contains("-"))?"-":"";
+            value=value.replaceFirst("-", "");
             String currency = String.format("%s", value);
             Matcher m = (Pattern.compile("\\.\\d*")).matcher(currency);
             String decimal = "";
@@ -151,7 +155,7 @@ public class CurrencyFormat {
                     indiancurrency = currency.charAt(i) + indiancurrency;
                 }
             }
-            return indiancurrency.trim() + decimal;
+            return minusSymbol+indiancurrency.trim() + decimal;
         }
     }
 }
