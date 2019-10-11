@@ -10,10 +10,10 @@ public class InWords {
     static String units[] = {"", "One", "Two", "Three", "Four", "Five", "Six", "Seven",
         "Eight", "Nine",};
     static String teens[] = {"Ten", "Eleven", "Twelve", "Thirteen", "Fourteen",
-        "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Ninteen",};
+        "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen",};
     static String hndrd[] = {"Hundred", "Thousand", "Lakh", "Crore"};
     static String tens[] = {"Twenty", "Thirty", "Fourty", "Fifty", "Sixty", "Seventy",
-        "Eighty", "Ninty"};
+        "Eighty", "Ninety"};
 
     public static String convert(Double number) {
         if (number == null) {
